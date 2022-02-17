@@ -93,6 +93,10 @@ set softtabstop=4 "4 пробела в табе
 set autoindent
 set cindent
 
+" Закрытие блоко по пробелам
+set foldenable
+set foldmethod=indent
+
 " Обновления
 set updatetime=300
 
@@ -103,11 +107,14 @@ nnoremap <C-P> :bprevious<CR>
 nnoremap <C-X> :bdelete<CR>
 
 " Выравнивание
-nmap <C-G> migg=G`ik<CR>
+nmap <leader>gf migg=G'ik<CR>
+
+" Вырубить подсветку поиска
+nmap ,<Space> :noh<CR>
 
 
 " КОНФИГИ ПЛАГИНОВ
+
 source $HOME/.config/nvim/plugins/easymotion.vim
 source $HOME/.config/nvim/plugins/nerdtree.vim
-
 source $HOME/.config/nvim/plugins/coc.vim
