@@ -20,6 +20,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'ap/vim-buftabline'
 " Коментирование
 Plug 'tpope/vim-commentary' 
+" Save as root
+Plug 'lambdalisue/suda.vim' 
+
 
 call plug#end()
 
@@ -111,7 +114,6 @@ nmap <leader>gf migg=G'ik<CR>
 
 " Вырубить подсветку поиска
 nmap ,<Space> :noh<CR>
-
 
 " КОНФИГИ ПЛАГИНОВ
 
