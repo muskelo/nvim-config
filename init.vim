@@ -120,4 +120,3 @@ nmap ,<Space> :noh<CR>
 source $HOME/.config/nvim/plugins/easymotion.vim
 source $HOME/.config/nvim/plugins/nerdtree.vim
 source $HOME/.config/nvim/plugins/coc.vim
-test
