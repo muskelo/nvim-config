@@ -115,6 +115,9 @@ nmap <leader>gf migg=G'ik<CR>
 " Вырубить подсветку поиска
 nmap ,<Space> :noh<CR>
 
+" Устанавливает тип файла для html
+autocmd BufNewFile,BufRead *.html set filetype=html
+
 " КОНФИГИ ПЛАГИНОВ
 
 source $HOME/.config/nvim/plugins/easymotion.vim
