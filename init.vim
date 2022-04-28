@@ -20,9 +20,11 @@ Plug 'easymotion/vim-easymotion'
 Plug 'ap/vim-buftabline'
 " Коментирование
 Plug 'tpope/vim-commentary' 
+Plug 'suy/vim-context-commentstring'
 " Save as root
 Plug 'lambdalisue/suda.vim' 
-
+" Vue
+Plug 'posva/vim-vue'
 
 call plug#end()
 
@@ -123,3 +125,4 @@ autocmd BufNewFile,BufRead *.html set filetype=html
 source $HOME/.config/nvim/plugins/easymotion.vim
 source $HOME/.config/nvim/plugins/nerdtree.vim
 source $HOME/.config/nvim/plugins/coc.vim
+source $HOME/.config/nvim/plugins/vue.vim
