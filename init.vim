@@ -25,6 +25,8 @@ Plug 'suy/vim-context-commentstring'
 Plug 'lambdalisue/suda.vim' 
 " Vue
 Plug 'posva/vim-vue'
+" Golang
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
@@ -117,11 +119,12 @@ nmap <leader>gf migg=G'ik<CR>
 " Вырубить подсветку поиска
 nmap ,<Space> :noh<CR>
 
-" Устанавливает тип файла для html
+" Filetypes (иногда некоторые программы
+" неявно меняют форматы для этих типов фалов) 
 autocmd BufNewFile,BufRead *.html set filetype=html
+autocmd BufNewFile,BufRead *.htmldjango set filetype=htmldjango
 
 " КОНФИГИ ПЛАГИНОВ
-
 source $HOME/.config/nvim/plugins/easymotion.vim
 source $HOME/.config/nvim/plugins/nerdtree.vim
 source $HOME/.config/nvim/plugins/coc.vim
