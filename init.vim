@@ -1,7 +1,10 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+
+"
 " УСТАНАВЛИВАЕМ ПЛАГИНЫ
+"
 
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -9,7 +12,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Темы
 Plug 'morhetz/gruvbox'
-" Атводополненеие
+" Поддержка ЯП и т.п.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Git
 Plug 'tpope/vim-fugitive'
@@ -25,13 +28,12 @@ Plug 'suy/vim-context-commentstring'
 Plug 'lambdalisue/suda.vim' 
 " Vue
 Plug 'posva/vim-vue'
-" Golang
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
 call plug#end()
 
 
+"
 " ОФОРМЛЕНИЕ
+"
 
 "Включить подсветку синтаксиса
 syntax on 
@@ -50,16 +52,17 @@ set nu
 set wrap
 set linebreak
 
-"Не мигать 
+" Не мигать и не пищать
 set novisualbell 
-" Не пищать
 set t_vb= 
 
 " Две строчки под системные сообщения
 set cmdheight=2
 
 
+"
 " ОБЩИЕ
+"
 
 " Отключаем поддежку Ruby и Perl
 let g:loaded_ruby_provider = 0
@@ -70,10 +73,9 @@ set mousehide
 "Включить поддержку мыши
 set mouse=a 
 
-"Кодировка терминала
-set termencoding=utf-8 
 " Удобное поведение backspace
 set backspace=indent,eol,start whichwrap+=<,>,[,]
+    
 " Вырубаем черточки на табах
 set showtabline=1
 
@@ -81,6 +83,8 @@ set showtabline=1
 set nobackup
 set noswapfile
 
+" Кодировка терминала
+set termencoding=utf-8 
 " Кодировка файлов по умолчанию
 set encoding=utf-8 
 set fileencodings=utf8,cp1251
@@ -107,6 +111,11 @@ set foldmethod=indent
 " Обновления
 set updatetime=300
 
+
+"
+" БИНДЫ
+"
+
 " Буффер vim'а
 set hidden
 nnoremap <C-N> :bnext<CR>
@@ -119,12 +128,20 @@ nmap <leader>gf migg=G'ik<CR>
 " Вырубить подсветку поиска
 nmap ,<Space> :noh<CR>
 
-" Filetypes (иногда некоторые программы
+
+"
+" FILETYPES (иногда некоторые программы
+"
+
 " неявно меняют форматы для этих типов фалов) 
 autocmd BufNewFile,BufRead *.html set filetype=html
 autocmd BufNewFile,BufRead *.htmldjango set filetype=htmldjango
 
+
+"
 " КОНФИГИ ПЛАГИНОВ
+" 
+
 source $HOME/.config/nvim/plugins/easymotion.vim
 source $HOME/.config/nvim/plugins/nerdtree.vim
 source $HOME/.config/nvim/plugins/coc.vim
