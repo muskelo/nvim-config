@@ -81,6 +81,7 @@ set showtabline=1
 
 " Вырубаем .swp и ~ (резервные) файлы
 set nobackup
+set nowritebackup
 set noswapfile
 
 " Кодировка терминала
