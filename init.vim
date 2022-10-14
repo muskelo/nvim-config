@@ -131,10 +131,8 @@ nmap ,<Space> :noh<CR>
 
 
 "
-" FILETYPES (иногда некоторые программы
+" FILETYPES (иногда некоторые программы неявно меняют форматы для этих типов фалов) 
 "
-
-" неявно меняют форматы для этих типов фалов) 
 autocmd BufNewFile,BufRead *.html set filetype=html
 autocmd BufNewFile,BufRead *.htmldjango set filetype=htmldjango
 
