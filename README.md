@@ -9,6 +9,10 @@
 
 1. Скачайте конфиг
 ```
+git clone https://github.com/Muskelo/nvim-config.git ~/.config/nvim
+```
+или
+```
 git clone git@github.com:Muskelo/nvim-config.git ~/.config/nvim
 ```
 2. Установить плагины (в nvim)
