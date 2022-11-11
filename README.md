@@ -3,7 +3,7 @@
 ## Подготовка
 
 1. Установите nvim
-2. Уcтановите vim-plug
+2. Уcтановите vim-plug (https://github.com/junegunn/vim-plug)
 
 ## Установка
 
