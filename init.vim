@@ -135,8 +135,10 @@ nmap ,<Space> :noh<CR>
 "
 autocmd BufNewFile,BufRead *.html set filetype=html
 autocmd BufNewFile,BufRead *.htmldjango set filetype=htmldjango
-
-
+autocmd BufNewFile,BufRead */ansible/*.yml set filetype=yaml.ansible
+let g:coc_filetype_map = {
+  \ 'yaml.ansible': 'ansible',
+  \ }
 "
 " КОНФИГИ ПЛАГИНОВ
 " 
