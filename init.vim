@@ -85,7 +85,6 @@ set nowritebackup
 set noswapfile
 
 " Кодировка терминала
-set termencoding=utf-8 
 " Кодировка файлов по умолчанию
 set encoding=utf-8 
 set fileencodings=utf8,cp1251
