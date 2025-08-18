@@ -1,0 +1,12 @@
+{
+  "languageserver": {
+    "jsonnet": {
+      "command": "jsonnet-language-server",
+      "args": ["-t"],
+      "rootPatterns": [".git/", "jsonnetfile.json"],
+      "filetypes": ["jsonnet","libsonnet"]
+    }
+  },
+  "python.formatting.autopep8Args": ["--max-line-length", "120", "--experimental"],
+  "inlayHint.enable": false
+}
