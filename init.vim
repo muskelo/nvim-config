@@ -6,7 +6,7 @@ filetype off                  " required
 " УСТАНАВЛИВАЕМ ПЛАГИНЫ
 "
 
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin()
 
 " Файловое дерево
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -19,8 +19,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 " Переходы
 Plug 'easymotion/vim-easymotion'
-" Мультифайл
-Plug 'ap/vim-buftabline'
+" Табы
+Plug 'romgrk/barbar.nvim'
 " Коментирование
 Plug 'tpope/vim-commentary' 
 Plug 'suy/vim-context-commentstring'
@@ -85,7 +85,7 @@ set nowritebackup
 set noswapfile
 
 " Кодировка терминала
-set termencoding=utf-8 
+" set termencoding=utf-8 
 " Кодировка файлов по умолчанию
 set encoding=utf-8 
 set fileencodings=utf8,cp1251
@@ -112,7 +112,6 @@ set foldmethod=indent
 " Обновления
 set updatetime=300
 
-
 "
 " БИНДЫ
 "
@@ -130,12 +129,17 @@ nmap <leader>gf migg=G'ik<CR>
 nmap ,<Space> :noh<CR>
 
 
+
 "
 " FILETYPES (иногда некоторые программы неявно меняют форматы для этих типов фалов) 
 "
 autocmd BufNewFile,BufRead *.html set filetype=html
 autocmd BufNewFile,BufRead *.htmldjango set filetype=htmldjango
+au BufRead,BufNewFile */ansible/*.yml set filetype=yaml.ansible
 
+let g:coc_filetype_map = {
+  \ 'yaml.ansible': 'ansible',
+  \ }
 
 "
 " КОНФИГИ ПЛАГИНОВ
@@ -145,3 +149,8 @@ source $HOME/.config/nvim/plugins/easymotion.vim
 source $HOME/.config/nvim/plugins/nerdtree.vim
 source $HOME/.config/nvim/plugins/coc.vim
 source $HOME/.config/nvim/plugins/vue.vim
+" source $HOME/.config/nvim/plugins/barbar.vim
+
+lua << EOF
+require('barbar').setup { icons = { filetype = { enabled = false } } }
+EOF

@@ -1,0 +1,32 @@
+{
+    "yaml.format.enable": true,
+    "yaml.format.singleQuote": false,
+    "yaml.format.bracketSpacing": true,
+    "yaml.format.proseWrap": "preserve",
+    "yaml.validate": true,
+    "yaml.schemas": {},
+    "yaml.trace.server": "verbose",
+    "inlayHint.enable": false,
+    "python.formatting.autopep8Args": [
+        "--max-line-length",
+        "120",
+        "--experimental"
+    ],
+    "javascript.autoClosingTags": false,
+    "languageserver": {
+        "jsonnet": {
+            "command": "jsonnet-language-server",
+            "args": [
+                "-t", "-J", "."
+            ],
+            "rootPatterns": [
+                ".git/",
+                "jsonnetfile.json"
+            ],
+            "filetypes": [
+                "jsonnet",
+                "libsonnet"
+            ]
+        }
+    }
+}
